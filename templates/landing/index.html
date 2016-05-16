@@ -1,7 +1,7 @@
+<!DOCTYPE html>
 
 {% load staticfiles %}
 
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Basic Page Needs
@@ -531,27 +531,30 @@
                         <small><em>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</em></small>
                     </div>
 
-                    <form>
+                    <form  role="form" action="" method="post">
+
+                      {% csrf_token %}
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                    <label for="InputEmail">Email address</label>
+                                    <input type="email" class="form-control" id="InputEmail" placeholder="Enter email">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    <label for="InputName">Name</label>
+                                    <input type="text" class="form-control" id="InputName" placeholder="Name">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Message</label>
-                            <textarea class="form-control" rows="3"></textarea>
+                            <label for="InputText">Message</label>
+                            <textarea class="form-control" rows="3" id = "InputText"></textarea>
                         </div>
 
-                        <button type="submit" class="btn tf-btn btn-default">Submit</button>
+                        <button type="submit" id="submit-contact" class="btn tf-btn btn-default">Submit</button>
                     </form>
 
                 </div>
@@ -588,11 +591,13 @@
 
     <script type="text/javascript" src=""{% static "js/jquery.isotope.js" %}"></script>
 
+
     <script src="{% static "js/owl.carousel.js" %}"></script>
 
     <!-- Javascripts
     ================================================== -->
     <script type="text/javascript" src="{% static  "js/main.js" %}"></script>
+      <script type="text/javascript" src="{% static  "js/contact.form.js" %}"></script>
 
   </body>
 </html>
