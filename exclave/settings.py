@@ -127,6 +127,7 @@ STATIC_PATH = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/' # You may find this is already defined as such.
 
+
 STATICFILES_DIRS = (
     STATIC_PATH,
 )
@@ -151,5 +152,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Absolute path to the media direct
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'bretuobay@gmail.com'
-EMAIL_HOST_PASSWORD = '_Mymanthefuckup10'
+EMAIL_HOST_PASSWORD = '--------------'
 EMAIL_PORT = 587

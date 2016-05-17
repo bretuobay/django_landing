@@ -24,7 +24,7 @@ $(function() {
         var name  = $("#InputName").val()
         var message = $("#InputText").val()
         var csrftoken = getCookie('csrftoken')
-        var url = 'landing/contact/' //window.location.href
+        var url = '/landing/contact/' //window.location.href
 
         var data_obj = {
           'email' : email,

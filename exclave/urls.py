@@ -18,5 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^landing/', include('landing.urls')),
+    #url(r'^landing/', include('landing.urls')),
+    # if matching nothing go to landing
+    url(r'^', include('landing.urls')),
 ]
