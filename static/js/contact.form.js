@@ -18,13 +18,13 @@ function getCookie(name) {
 
 $(function() {
 
-    $("#submit-contact").click(function(){
+    $("#submit-contact").click(function( event ){
 
         var email = $("#InputEmail").val()
         var name  = $("#InputName").val()
         var message = $("#InputText").val()
         var csrftoken = getCookie('csrftoken')
-        var url = '/landing/contact/' //window.location.href
+        var url = "{% url "contact" %}" //window.location.href
 
         var data_obj = {
           'email' : email,
@@ -33,9 +33,10 @@ $(function() {
           'csrftoken' : csrftoken
         }
 
-        cosole.log(data_obj)
-        alert(JSON.stringify(data_obj))
+      //  alert(url)
 
+        //cosole.log(data_obj)
+        //alert(JSON.stringify(data_obj))
 
         $.ajax({
 
@@ -44,7 +45,8 @@ $(function() {
          data : data_obj,
          dataType : "json",
          success: function(data ){
-              alert(JSON.stringify(data))
+              console.log(data))
+              event.preventDefault();
             }
         });
 
